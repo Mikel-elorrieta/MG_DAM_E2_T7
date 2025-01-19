@@ -1,0 +1,70 @@
+INSERT INTO `reuniones` (`id_reunion`, `estado`, `estado_eus`, `profesor_id`, `alumno_id`, `id_centro`, `titulo`, `asunto`, `aula`, `fecha`) VALUES
+-- 19 de enero
+(2, 'pendiente', NULL, 1, 3, '15112', 'Revisión Proyecto', 'Planificación inicial', 'Aula 5.101', '2025-01-19 09:00:00'),
+(3, 'pendiente', NULL, 4, 3, '15112', 'Tutoría General', 'Consulta dudas', 'Aula 4.204', '2025-01-19 11:00:00'),
+-- 20 de enero
+(4, 'pendiente', NULL, 1, 5, '15112', 'Evaluación', 'Primera revisión', 'Aula 2.102', '2025-01-20 10:00:00'),
+(5, 'pendiente', NULL, 2, 3, '15112', 'Reunión Seguimiento', 'Organización Tareas', 'Aula 3.105', '2025-01-20 13:00:00'),
+-- 21 de enero
+(6, 'pendiente', NULL, 1, 3, '15112', 'Planificación Reto', 'Preparación Entregables', 'Aula 5.201', '2025-01-21 09:30:00'),
+(7, 'pendiente', NULL, 4, 5, '15112', 'Consulta Académica', 'Ayuda en proyecto', 'Aula 4.303', '2025-01-21 14:00:00'),
+-- 22 de enero
+(8, 'pendiente', NULL, 2, 3, '15112', 'Análisis Progreso', 'Tareas completadas', 'Aula 3.104', '2025-01-22 08:00:00'),
+(9, 'pendiente', NULL, 4, 3, '15112', 'Seguimiento', 'Consulta avances', 'Aula 1.101', '2025-01-22 12:30:00'),
+-- 23 de enero
+(10, 'pendiente', NULL, 1, 5, '15112', 'Revisión Código', 'Feedback y mejoras', 'Aula 2.203', '2025-01-23 10:00:00'),
+(11, 'pendiente', NULL, 3, 4, '15112', 'Sesión Mentoría', 'Pruebas y errores', 'Aula 4.105', '2025-01-23 16:00:00'),
+-- 24 de enero
+(12, 'pendiente', NULL, 2, 3, '15112', 'Progreso Reto', 'Feedback global', 'Aula 3.101', '2025-01-24 11:00:00'),
+(13, 'pendiente', NULL, 1, 5, '15112', 'Avances Proyecto', 'Consultas técnicas', 'Aula 2.205', '2025-01-24 14:30:00'),
+-- 25 de enero
+(14, 'pendiente', NULL, 4, 3, '15112', 'Revisión Documentos', 'Correcciones', 'Aula 5.201', '2025-01-25 09:00:00'),
+(15, 'pendiente', NULL, 1, 3, '15112', 'Sesión Tutoría', 'Solución conflictos', 'Aula 4.103', '2025-01-25 12:00:00'),
+-- 26 de enero
+(16, 'pendiente', NULL, 3, 4, '15112', 'Revisión Código', 'Evaluación general', 'Aula 1.102', '2025-01-26 08:30:00'),
+(17, 'pendiente', NULL, 2, 5, '15112', 'Seguimiento Proyecto', 'Consultas pendientes', 'Aula 3.202', '2025-01-26 14:00:00'),
+-- 27 de enero
+(18, 'pendiente', NULL, 1, 3, '15112', 'Análisis Avances', 'Planificación Sprint', 'Aula 5.101', '2025-01-27 10:00:00'),
+(19, 'pendiente', NULL, 4, 5, '15112', 'Revisión Progreso', 'Resolución dudas', 'Aula 4.304', '2025-01-27 13:30:00'),
+-- 28 de enero
+(20, 'pendiente', NULL, 2, 3, '15112', 'Evaluación Proyecto', 'Feedback detallado', 'Aula 3.105', '2025-01-28 09:00:00'),
+(21, 'pendiente', NULL, 4, 3, '15112', 'Consulta Académica', 'Dudas sobre teoría', 'Aula 1.202', '2025-01-28 15:00:00'),
+-- 29 de enero
+(22, 'pendiente', NULL, 1, 5, '15112', 'Tutoría Proyecto', 'Problemas detectados', 'Aula 2.201', '2025-01-29 10:30:00'),
+(23, 'pendiente', NULL, 2, 4, '15112', 'Revisión Sprint', 'Planificación entregas', 'Aula 3.202', '2025-01-29 12:30:00'),
+-- 30 de enero
+(24, 'pendiente', NULL, 4, 3, '15112', 'Consulta General', 'Resolución problemas', 'Aula 5.301', '2025-01-30 08:00:00'),
+(25, 'pendiente', NULL, 1, 5, '15112', 'Revisión Final', 'Últimos detalles', 'Aula 4.101', '2025-01-30 14:00:00'),
+-- 31 de enero
+(26, 'pendiente', NULL, 2, 3, '15112', 'Seguimiento', 'Preparación Examen', 'Aula 3.103', '2025-01-31 10:00:00'),
+(27, 'pendiente', NULL, 1, 3, '15112', 'Planificación Final', 'Organización tareas', 'Aula 2.104', '2025-01-31 15:00:00'),
+-- 1 de febrero
+(28, 'pendiente', NULL, 3, 4, '15112', 'Consulta Académica', 'Tareas avanzadas', 'Aula 4.205', '2025-02-01 09:00:00'),
+(29, 'pendiente', NULL, 1, 5, '15112', 'Revisión Objetivos', 'Metas del proyecto', 'Aula 2.301', '2025-02-01 14:00:00'),
+-- 2 de febrero
+(30, 'pendiente', NULL, 2, 3, '15112', 'Progreso Actual', 'Planificación futura', 'Aula 3.102', '2025-02-02 08:30:00'),
+(31, 'pendiente', NULL, 4, 3, '15112', 'Consulta Detallada', 'Estrategias de mejora', 'Aula 5.104', '2025-02-02 13:00:00'),
+-- 3 de febrero
+(32, 'pendiente', NULL, 1, 5, '15112', 'Planificación Reto', 'Planificación entregas', 'Aula 2.102', '2025-02-03 10:00:00'),
+(33, 'pendiente', NULL, 2, 4, '15112', 'Evaluación Examen', 'Consulta sobre teoría', 'Aula 3.105', '2025-02-03 15:30:00'),
+-- 4 de febrero
+(34, 'pendiente', NULL, 4, 3, '15112', 'Revisión Semanal', 'Avances generales', 'Aula 1.105', '2025-02-04 08:00:00'),
+(35, 'pendiente', NULL, 1, 5, '15112', 'Consulta General', 'Dudas técnicas', 'Aula 5.202', '2025-02-04 11:00:00'),
+-- 5 de febrero
+(36, 'pendiente', NULL, 2, 3, '15112', 'Revisión Sprint', 'Preparación final', 'Aula 3.203', '2025-02-05 09:30:00'),
+(37, 'pendiente', NULL, 4, 5, '15112', 'Consulta Personal', 'Resolución pendiente', 'Aula 4.301', '2025-02-05 13:00:00'),
+-- 6 de febrero
+(38, 'pendiente', NULL, 1, 3, '15112', 'Progreso Proyecto', 'Evaluación global', 'Aula 2.201', '2025-02-06 10:00:00'),
+(39, 'pendiente', NULL, 2, 4, '15112', 'Evaluación Sprint', 'Planificación entregas', 'Aula 3.202', '2025-02-06 15:00:00'),
+-- 7 de febrero
+(40, 'pendiente', NULL, 4, 3, '15112', 'Seguimiento Final', 'Avance entregables', 'Aula 5.103', '2025-02-07 09:00:00'),
+(41, 'pendiente', NULL, 1, 5, '15112', 'Consulta Técnica', 'Análisis objetivos', 'Aula 4.205', '2025-02-07 12:30:00'),
+-- 8 de febrero
+(42, 'pendiente', NULL, 2, 3, '15112', 'Revisión Semanal', 'Resolución dudas', 'Aula 3.201', '2025-02-08 08:30:00'),
+(43, 'pendiente', NULL, 1, 4, '15112', 'Consulta Personal', 'Preparación examen', 'Aula 2.101', '2025-02-08 14:00:00'),
+-- 9 de febrero
+(44, 'pendiente', NULL, 3, 4, '15112', 'Planificación Final', 'Planificación global', 'Aula 4.102', '2025-02-09 10:00:00'),
+(45, 'pendiente', NULL, 1, 5, '15112', 'Consulta Detallada', 'Detalles finales', 'Aula 5.304', '2025-02-09 15:30:00'),
+-- 10 de febrero
+(46, 'pendiente', NULL, 2, 3, '15112', 'Evaluación General', 'Revisión general', 'Aula 3.103', '2025-02-10 09:00:00'),
+(47, 'pendiente', NULL, 4, 5, '15112', 'Consulta Final', 'Últimos pasos', 'Aula 4.205', '2025-02-10 13:00:00');
