@@ -88,6 +88,13 @@ public class MenuFrame extends JFrame {
 		contentPane.add(btnOrdutegi);
 		
 		JButton btnBesteOrdutegi = new JButton("");
+		btnBesteOrdutegi.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				controller.FrameMugimendu.besteOrdutegiJoan();
+				dispose();
+				
+			}
+		});
 		btnBesteOrdutegi.setVerticalAlignment(SwingConstants.TOP);
 		btnBesteOrdutegi.setBackground(Color.WHITE);
 		btnBesteOrdutegi.setSelectedIcon(new ImageIcon("C:\\Users\\in2dm3-d\\Desktop\\WorkSpace\\Erronka2_App\\img\\fp1 (2).png"));

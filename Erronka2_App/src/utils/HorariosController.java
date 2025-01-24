@@ -16,7 +16,7 @@ public class HorariosController {
     }
 
     public Map<String, Integer> cargarProfesores() {
-        Object response = konexioa.ask("getAllUsers/");
+        Object response = konexioa.ask("getAllTeachers/");
 
         if (response instanceof List<?>) {
             List<?> lista = (List<?>) response;
@@ -30,7 +30,7 @@ public class HorariosController {
         return profesorMap;
     }
 
-    public List<Horarios> cargarHorariosPorProfesor(int profeId) {
+    public static List<Horarios> cargarHorariosPorProfesor(int profeId) {
         Object response = konexioa.ask("getHorariosByUserId/" + profeId);
 
         if (response instanceof List<?> && !((List<?>) response).isEmpty() && ((List<?>) response).get(0) instanceof Horarios) {

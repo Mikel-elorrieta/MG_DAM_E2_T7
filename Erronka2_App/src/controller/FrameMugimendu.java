@@ -43,4 +43,13 @@ public class FrameMugimendu {
 			e.printStackTrace();
 		}
 	}
+	
+	public static void besteOrdutegiJoan() {
+		try {
+			vista.BesteOrdutegiFrame frame = new vista.BesteOrdutegiFrame();
+			frame.setVisible(true);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 }

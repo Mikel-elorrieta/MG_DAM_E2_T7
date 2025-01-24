@@ -47,6 +47,7 @@ public class konexioa {
 	
 	public static void main(String[] args) {
 		System.out.println(ask("getAllUsers/"));
+		System.out.println(ask("getAllTeachers/"));
 //		System.out.println(ask("getUserByName/jorge"));
 //		System.out.println(ask("getBilerakByUserId/4"));
 //		System.out.println(ask("isLoginOk/mitane/1234"));
