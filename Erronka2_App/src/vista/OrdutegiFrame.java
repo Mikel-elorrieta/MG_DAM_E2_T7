@@ -60,6 +60,7 @@ public class OrdutegiFrame extends JFrame {
 		contentPane.add(btnAtzera);
 
 		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setViewportBorder(null);
 		scrollPane.setBounds(66, 161, 667, 283);
 		contentPane.add(scrollPane);
 

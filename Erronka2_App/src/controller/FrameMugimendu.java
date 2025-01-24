@@ -52,4 +52,13 @@ public class FrameMugimendu {
 			e.printStackTrace();
 		}
 	}
+	
+	public static void bileraJoan() {
+		try {
+			vista.BilerakFrame frame = new vista.BilerakFrame();
+			frame.setVisible(true);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 }

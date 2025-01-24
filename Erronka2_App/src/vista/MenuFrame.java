@@ -104,6 +104,12 @@ public class MenuFrame extends JFrame {
 		contentPane.add(btnBesteOrdutegi);
 		
 		JButton btnBilera = new JButton("");
+		btnBilera.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				controller.FrameMugimendu.bileraJoan();
+				dispose();			
+			}
+		});
 		btnBilera.setIcon(new ImageIcon("C:\\Users\\in2dm3-d\\Desktop\\Erronka_2\\MG_DAM_E2_T7\\Erronka2_App\\img\\bilera.jpg"));
 		btnBilera.setVerticalAlignment(SwingConstants.TOP);
 		btnBilera.setFont(new Font("Tw Cen MT", Font.PLAIN, 25));
