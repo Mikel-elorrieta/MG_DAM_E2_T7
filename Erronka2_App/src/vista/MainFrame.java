@@ -64,7 +64,7 @@ public class MainFrame extends JFrame {
         contentPane.setLayout(null);
 
         JLabel lblIcon = new JLabel("");
-        lblIcon.setIcon(new ImageIcon("C:\\Users\\in2dm3-d\\Desktop\\WorkSpace\\Erronka2_App\\img\\logo.jpg"));
+        lblIcon.setIcon(new ImageIcon("C:\\Users\\in2dm3-d\\Desktop\\Erronka_2\\MG_DAM_E2_T7\\Erronka2_App\\img\\logo.jpg"));
         lblIcon.setBounds(10, 11, 240, 75);
         contentPane.add(lblIcon);
 
@@ -110,12 +110,12 @@ public class MainFrame extends JFrame {
         btnLogin.setBounds(32, 284, 310, 23);
         panel.add(btnLogin);
         
-                JLabel lblIcon1 = new JLabel("");
-                lblIcon1.setBounds(387, 11, 389, 363);
-                panel.add(lblIcon1);
-                lblIcon1.setForeground(new Color(0, 128, 128));
-                lblIcon1.setIcon(new ImageIcon("C:\\Users\\in2dm3-d\\Desktop\\WorkSpace\\Erronka2_App\\img\\fp1.png"));
-                lblIcon1.setHorizontalAlignment(SwingConstants.CENTER);
+        JLabel lblIcon1 = new JLabel("");
+        lblIcon1.setBounds(387, 11, 389, 363);
+        panel.add(lblIcon1);
+        lblIcon1.setForeground(new Color(0, 128, 128));
+        lblIcon1.setIcon(new ImageIcon("C:\\Users\\in2dm3-d\\Desktop\\Erronka_2\\MG_DAM_E2_T7\\Erronka2_App\\img\\fp1.png"));
+        lblIcon1.setHorizontalAlignment(SwingConstants.CENTER);
 
         btnLogin.addActionListener(new ActionListener() {
             @Override
@@ -131,7 +131,7 @@ public class MainFrame extends JFrame {
 
                     JOptionPane.showMessageDialog(contentPane, "Kaixo " + username + ", barruan zaude", "Éxito", JOptionPane.INFORMATION_MESSAGE);
                     
-                    utils.FrameMugimendua.menuraJoan();
+                    controller.FrameMugimendu.menuraJoan();
                     dispose();
                 } else {
                     JOptionPane.showMessageDialog(contentPane, "Usuario o contraseña incorrectos", "Error", JOptionPane.ERROR_MESSAGE);

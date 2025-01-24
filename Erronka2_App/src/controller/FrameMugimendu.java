@@ -1,14 +1,15 @@
-package utils;
+package controller;
 
 import java.util.List;
 
 import modelo.Users;
+import utils.Login;
+import utils.UserParser;
 import vista.MainFrame;
 import vista.MenuFrame;
 import vista.OrdutegiFrame;
 
-public class FrameMugimendua {
-	
+public class FrameMugimendu {
 	public static void menuraJoan() {
 		try {
 			MenuFrame frame = new MenuFrame();
@@ -43,5 +44,3 @@ public class FrameMugimendua {
 		}
 	}
 }
-
-
