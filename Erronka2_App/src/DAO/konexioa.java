@@ -13,8 +13,8 @@ public class konexioa {
 
 	public static void connect() {
 		try {
-			server = new Socket("10.5.104.55", 10000);
-			//server = new Socket("10.5.104.39", 20000);
+			// server = new Socket("10.5.104.55", 10000);
+			 server = new Socket("10.5.104.39", 20000);
 			System.out.println("Konexioa lortu da");
 		} catch (UnknownHostException e) {
 			System.out.println("Host-a ez da aurkitu");
@@ -47,11 +47,11 @@ public class konexioa {
 	
 	public static void main(String[] args) {
 		System.out.println(ask("getAllUsers/"));
-		System.out.println(ask("getAllTeachers/"));
+//		System.out.println(ask("getAllTeachers/"));
 //		System.out.println(ask("getUserByName/jorge"));
-//		System.out.println(ask("getBilerakByUserId/4"));
+		System.out.println(ask("getBilerakByUserId/4"));
 //		System.out.println(ask("isLoginOk/mitane/1234"));
-//		System.out.println(ask("getHorariosByUserId/1"));
+//		System.out.println(ask("getHorariosByUserId/4"));
 //		System.out.println(ask("forgotPassword/iker.corteste@elorrieta-errekamari.com"));
 	}
 }

@@ -23,7 +23,7 @@ public class MainFrame extends JFrame {
     private JTextField textUser;
     private JPasswordField textPass;
     private Login login;
-
+    public static Users usuario;
     /**
      * Launch the application.
      */
@@ -123,20 +123,20 @@ public class MainFrame extends JFrame {
                 String username = textUser.getText();
                 String password = new String(textPass.getPassword());
 
-                Object usuario = null;
-
                 if (login.balidatu(username, password)) {
-                    usuario = DAO.konexioa.ask("getUserByName/" + username);
-                    System.out.println("Usuario guardado: " + usuario);
+                    // Obtener el usuario autenticado
+                    usuario = (Users) DAO.konexioa.ask("getUserByName/" + username);
 
                     JOptionPane.showMessageDialog(contentPane, "Kaixo " + username + ", barruan zaude", "Éxito", JOptionPane.INFORMATION_MESSAGE);
-                    
+
                     controller.FrameMugimendu.menuraJoan();
                     dispose();
+                    
                 } else {
                     JOptionPane.showMessageDialog(contentPane, "Usuario o contraseña incorrectos", "Error", JOptionPane.ERROR_MESSAGE);
                 }
             }
         });
+
     }
 }

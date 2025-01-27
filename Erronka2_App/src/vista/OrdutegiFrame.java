@@ -20,6 +20,7 @@ public class OrdutegiFrame extends JFrame {
 	private JTable tableOrdu;
 
 	public OrdutegiFrame() {
+		 
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 823, 546);
@@ -28,6 +29,47 @@ public class OrdutegiFrame extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("ORDUA");
+		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel.setFont(new Font("Yu Gothic Medium", Font.PLAIN, 14));
+		lblNewLabel.setBounds(82, 225, 65, 23);
+		contentPane.add(lblNewLabel);
+		
+		JSeparator separator_1_1 = new JSeparator();
+		separator_1_1.setForeground(Color.BLACK);
+		separator_1_1.setBounds(64, 246, 684, 2);
+		contentPane.add(separator_1_1);
+		
+		JLabel lblVo = new JLabel("V/O");
+		lblVo.setHorizontalAlignment(SwingConstants.CENTER);
+		lblVo.setFont(new Font("Yu Gothic Medium", Font.PLAIN, 14));
+		lblVo.setBounds(663, 225, 65, 23);
+		contentPane.add(lblVo);
+		
+		JLabel lblLa = new JLabel("L/A");
+		lblLa.setHorizontalAlignment(SwingConstants.CENTER);
+		lblLa.setFont(new Font("Yu Gothic Medium", Font.PLAIN, 14));
+		lblLa.setBounds(200, 225, 65, 23);
+		contentPane.add(lblLa);
+		
+		JLabel lblMa = new JLabel("M/A");
+		lblMa.setHorizontalAlignment(SwingConstants.CENTER);
+		lblMa.setFont(new Font("Yu Gothic Medium", Font.PLAIN, 14));
+		lblMa.setBounds(309, 225, 65, 23);
+		contentPane.add(lblMa);
+		
+		JLabel lblX = new JLabel("X");
+		lblX.setHorizontalAlignment(SwingConstants.CENTER);
+		lblX.setFont(new Font("Yu Gothic Medium", Font.PLAIN, 14));
+		lblX.setBounds(419, 225, 65, 23);
+		contentPane.add(lblX);
+		
+		JLabel lblJo = new JLabel("J/O");
+		lblJo.setHorizontalAlignment(SwingConstants.CENTER);
+		lblJo.setFont(new Font("Yu Gothic Medium", Font.PLAIN, 14));
+		lblJo.setBounds(539, 225, 65, 23);
+		contentPane.add(lblJo);
 
 		JLabel lblIcon = new JLabel("");
 		lblIcon.setIcon(new ImageIcon("C:\\Users\\in2dm3-d\\Desktop\\Erronka_2\\MG_DAM_E2_T7\\Erronka2_App\\img\\logo.jpg"));
@@ -58,59 +100,61 @@ public class OrdutegiFrame extends JFrame {
 		btnAtzera.setIcon(new ImageIcon("C:\\Users\\in2dm3-d\\Desktop\\Erronka_2\\MG_DAM_E2_T7\\Erronka2_App\\img\\backward (1).jpg"));
 		btnAtzera.setBounds(10, 442, 57, 54);
 		contentPane.add(btnAtzera);
+		
+		JLabel lblTitle = new JLabel("Zure Ordutegia");
+		lblTitle.setFont(new Font("Times New Roman", Font.PLAIN, 37));
+		lblTitle.setHorizontalAlignment(SwingConstants.CENTER);
+		lblTitle.setBounds(169, 121, 461, 54);
+		contentPane.add(lblTitle);
+		
+		JSeparator separator_1 = new JSeparator();
+		separator_1.setBounds(190, 170, 386, 2);
+		contentPane.add(separator_1);
+		
+				tableOrdu = new JTable();
+				tableOrdu.setBounds(64, 246, 683, 176);
+				contentPane.add(tableOrdu);
 
-		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setViewportBorder(null);
-		scrollPane.setBounds(66, 161, 667, 283);
-		contentPane.add(scrollPane);
-
-		tableOrdu = new JTable();
-		scrollPane.setViewportView(tableOrdu);
-
-		// Cargar horarios en la tabla
 		cargarHorariosEnTabla();
 	}
 
 	private void cargarHorariosEnTabla() {
-	    // Columnas: Horas, Lunes, Martes, Miércoles, Jueves, Viernes
 	    String[] columnNames = {"Hora", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes"};
 	    DefaultTableModel model = new DefaultTableModel(columnNames, 0);
 
-	    // Obtener horarios del controlador
-	    List<Horarios> horarios = HorariosController.cargarHorariosPorProfesor(4);
+	    List<Horarios> horarios = HorariosController.cargarHorariosPorProfesor(MainFrame.usuario.getId());
 
-	    // Organizar los horarios por hora y día
+	    // Ordutegiak orduaren eta egunaren arabera antolatu
 	    Map<String, Map<String, String>> horariosMap = new TreeMap<>();
 	    for (Horarios horario : horarios) {
 	        String hora = horario.getId().getHora();
 	        String dia = horario.getId().getDia();
 	        String asignatura = horario.getModulos().getNombre();
 
-	        // Asegurarse de que no haya datos inválidos
 	        if (hora != null && dia != null) {
 	            horariosMap.putIfAbsent(hora, new TreeMap<>());
+
+	            // Irakasgaia dagokion egunari lotu
 	            horariosMap.get(hora).put(dia, asignatura);
 	        }
 	    }
 
-	    // Crear filas para la tabla
+	    // Sortu taula errenkadak
 	    for (Map.Entry<String, Map<String, String>> entry : horariosMap.entrySet()) {
 	        String hora = entry.getKey();
 	        Map<String, String> diaAsignaturas = entry.getValue();
 
-	        // Asegurar que se respeten celdas vacías por día
 	        Object[] row = new Object[6];
 	        row[0] = hora;
 	        row[1] = diaAsignaturas.getOrDefault("L/A", "");
 	        row[2] = diaAsignaturas.getOrDefault("M/A", "");
 	        row[3] = diaAsignaturas.getOrDefault("X", "");
-	        row[4] = diaAsignaturas.getOrDefault("J", "");
-	        row[5] = diaAsignaturas.getOrDefault("V", "");
+	        row[4] = diaAsignaturas.getOrDefault("J/O", "");
+	        row[5] = diaAsignaturas.getOrDefault("V/O", "");
+
 	        model.addRow(row);
 	    }
 
 	    tableOrdu.setModel(model);
 	}
-
-
 }
