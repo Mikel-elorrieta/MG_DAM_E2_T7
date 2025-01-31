@@ -46,9 +46,7 @@ public class konexioa {
 	}
 	
 	public static void main(String[] args) {
-		System.out.println(ask("getHorariosByAlumnoId/3/"));
+//		System.out.println(ask("getAllIkastetxeak/"));
+		System.out.println(ask("getHorariosByAlumnoId/3"));
 	}
 }
-//	System.out.println(ask("getAllTeachers/"));
-//  System.out.println(ask("isLoginOk/mitane/1234"));
-//  System.out.println(ask("forgotPassword/iker.corteste@elorrieta-errekamari.com"));
