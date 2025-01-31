@@ -6,10 +6,11 @@
 -- Host: localhost    Database: elorbase
 -- ------------------------------------------------------
 -- Server version	8.0.40
+drop database if exists elorbase;
 create database if not exists elorbase;
 use elorbase;
-create user 'admin'@'%';
-Grant all privileges on *.* to 'admin'@'%';
+-- create user 'admin'@'%';
+-- Grant all privileges on *.* to 'admin'@'%';
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -350,7 +351,7 @@ DROP TABLE IF EXISTS `users`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `users` (
-  `id` int NOT NULL,
+  `id` int NOT NULL AUTO_INCREMENT,
   `email` varchar(100) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `username` varchar(50) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `password` varchar(50) COLLATE utf8mb4_general_ci DEFAULT NULL,
