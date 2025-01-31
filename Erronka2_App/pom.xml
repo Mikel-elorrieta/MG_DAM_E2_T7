@@ -52,5 +52,10 @@
             <artifactId>javassist</artifactId>
             <version>3.25.0-GA</version>
         </dependency>
-    </dependencies>
+        <dependency>
+        	<groupId>DA_SQL</groupId>
+        	<artifactId>DA_SQL</artifactId>
+        	<version>0.0.1-SNAPSHOT</version>
+        </dependency>
+  </dependencies>
 </project>

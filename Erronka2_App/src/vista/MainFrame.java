@@ -24,6 +24,7 @@ public class MainFrame extends JFrame {
     private JPasswordField textPass;
     private Login login;
     public static Users usuario;
+  
     /**
      * Launch the application.
      */
@@ -64,7 +65,7 @@ public class MainFrame extends JFrame {
         contentPane.setLayout(null);
 
         JLabel lblIcon = new JLabel("");
-        lblIcon.setIcon(new ImageIcon("C:\\Users\\in2dm3-d\\Desktop\\Erronka_2\\MG_DAM_E2_T7\\Erronka2_App\\img\\logo.jpg"));
+        lblIcon.setIcon(new ImageIcon("img/logo.jpg"));
         lblIcon.setBounds(10, 11, 240, 75);
         contentPane.add(lblIcon);
 
@@ -114,7 +115,7 @@ public class MainFrame extends JFrame {
         lblIcon1.setBounds(387, 11, 389, 363);
         panel.add(lblIcon1);
         lblIcon1.setForeground(new Color(0, 128, 128));
-        lblIcon1.setIcon(new ImageIcon("C:\\Users\\in2dm3-d\\Desktop\\Erronka_2\\MG_DAM_E2_T7\\Erronka2_App\\img\\fp1.png"));
+        lblIcon1.setIcon(new ImageIcon("img/fp1.png"));
         lblIcon1.setHorizontalAlignment(SwingConstants.CENTER);
 
         btnLogin.addActionListener(new ActionListener() {
@@ -124,7 +125,6 @@ public class MainFrame extends JFrame {
                 String password = new String(textPass.getPassword());
 
                 if (login.balidatu(username, password)) {
-                    // Obtener el usuario autenticado
                     usuario = (Users) DAO.konexioa.ask("getUserByName/" + username);
 
                     JOptionPane.showMessageDialog(contentPane, "Kaixo " + username + ", barruan zaude", "Éxito", JOptionPane.INFORMATION_MESSAGE);

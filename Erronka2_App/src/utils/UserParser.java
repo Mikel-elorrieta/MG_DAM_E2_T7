@@ -8,21 +8,21 @@ import modelo.Users;
 public class UserParser {
     public static List<Users> parseUsers(Object serverResponse) {
        
-        List<Users> users = new ArrayList<>(); // Crear una lista vacía para almacenar los objetos Users
+        List<Users> users = new ArrayList<>();
 
-        if (serverResponse instanceof List<?>) { // Verificar si la respuesta del servidor es una instancia de List
+        if (serverResponse instanceof List<?>) {
 
-            for (Object obj : (List<?>) serverResponse) { // Iterar sobre cada elemento en la lista
+            for (Object obj : (List<?>) serverResponse) {
                
-                if (obj instanceof Users) { // Verificar si el elemento es una instancia de Users
+                if (obj instanceof Users) {
                     
-                    users.add((Users) obj); // Agregar el objeto Users a la lista
+                    users.add((Users) obj);
                 } else {
-                    System.err.println("Objeto no es una instancia de Users: " + obj.getClass().getName());
+                    System.err.println("Objetua ez da Users: " + obj.getClass().getName());
                 }
             }
         } else {
-            System.err.println("serverResponse no es una lista: " + serverResponse.getClass().getName());
+            System.err.println("serverResponse ez da zerrenda: " + serverResponse.getClass().getName());
         }
         return users;
     }

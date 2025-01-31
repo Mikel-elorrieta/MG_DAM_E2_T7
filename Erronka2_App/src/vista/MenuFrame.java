@@ -83,7 +83,7 @@ public class MenuFrame extends JFrame {
 				dispose();
 			}
 		});
-		btnOrdutegi.setIcon(new ImageIcon("C:\\Users\\in2dm3-d\\Desktop\\Erronka_2\\MG_DAM_E2_T7\\Erronka2_App\\img\\BesteHorario.jpg"));
+		btnOrdutegi.setIcon(new ImageIcon("img/BesteHorario.jpg"));
 		btnOrdutegi.setBackground(Color.WHITE);
 		btnOrdutegi.setFont(new Font("Tw Cen MT", Font.PLAIN, 25));
 		btnOrdutegi.setVerticalAlignment(SwingConstants.TOP);
@@ -100,8 +100,8 @@ public class MenuFrame extends JFrame {
 		});
 		btnBesteOrdutegi.setVerticalAlignment(SwingConstants.TOP);
 		btnBesteOrdutegi.setBackground(Color.WHITE);
-		btnBesteOrdutegi.setSelectedIcon(new ImageIcon("C:\\Users\\in2dm3-d\\Desktop\\WorkSpace\\Erronka2_App\\img\\fp1 (2).png"));
-		btnBesteOrdutegi.setIcon(new ImageIcon("C:\\Users\\in2dm3-d\\Desktop\\Erronka_2\\MG_DAM_E2_T7\\Erronka2_App\\img\\horario.jpg"));
+		btnBesteOrdutegi.setSelectedIcon(new ImageIcon("img/fp1.png"));
+		btnBesteOrdutegi.setIcon(new ImageIcon("img/horario.jpg"));
 		btnBesteOrdutegi.setFont(new Font("Tw Cen MT", Font.PLAIN, 25));
 		btnBesteOrdutegi.setBounds(275, 166, 255, 268);
 		contentPane.add(btnBesteOrdutegi);
@@ -113,7 +113,7 @@ public class MenuFrame extends JFrame {
 				dispose();			
 			}
 		});
-		btnBilera.setIcon(new ImageIcon("C:\\Users\\in2dm3-d\\Desktop\\Erronka_2\\MG_DAM_E2_T7\\Erronka2_App\\img\\bilera.jpg"));
+		btnBilera.setIcon(new ImageIcon("img/bilera.jpg"));
 		btnBilera.setVerticalAlignment(SwingConstants.TOP);
 		btnBilera.setFont(new Font("Tw Cen MT", Font.PLAIN, 25));
 		btnBilera.setBackground(Color.WHITE);
@@ -121,7 +121,7 @@ public class MenuFrame extends JFrame {
 		contentPane.add(btnBilera);
 		
 		JLabel lblIcon = new JLabel("");
-		lblIcon.setIcon(new ImageIcon("C:\\Users\\in2dm3-d\\Desktop\\Erronka_2\\MG_DAM_E2_T7\\Erronka2_App\\img\\logo.jpg"));
+		lblIcon.setIcon(new ImageIcon("img/logo.jpg"));
 		lblIcon.setBounds(10, 31, 240, 75);
 		contentPane.add(lblIcon);
 		

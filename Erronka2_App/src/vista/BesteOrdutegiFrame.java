@@ -35,7 +35,7 @@ public class BesteOrdutegiFrame extends JFrame {
         contentPane.setLayout(null);
 
         JLabel lblIcon = new JLabel("");
-        lblIcon.setIcon(new ImageIcon("C:\\Users\\in2dm3-d\\Desktop\\Erronka_2\\MG_DAM_E2_T7\\Erronka2_App\\img\\logo.jpg"));
+        lblIcon.setIcon(new ImageIcon("img/logo.jpg"));
         lblIcon.setBounds(10, 0, 240, 75);
         contentPane.add(lblIcon);
 
@@ -59,7 +59,7 @@ public class BesteOrdutegiFrame extends JFrame {
             controller.FrameMugimendu.menuraJoan();
             dispose();
         });
-        btnAtzera.setIcon(new ImageIcon("C:\\Users\\in2dm3-d\\Desktop\\Erronka_2\\MG_DAM_E2_T7\\Erronka2_App\\img\\backward (1).jpg"));
+        btnAtzera.setIcon(new ImageIcon("img/backward.jpg"));
         btnAtzera.setBackground(Color.WHITE);
         btnAtzera.setBounds(10, 447, 57, 54);
         contentPane.add(btnAtzera);
@@ -80,19 +80,25 @@ public class BesteOrdutegiFrame extends JFrame {
         contentPane.add(separator_1);
 
         tableBeste = new JTable();
+        tableBeste.setModel(new DefaultTableModel(
+        	new Object[][] {
+        	},
+        	new String[] {
+        	}
+        ));
         tableBeste.setBounds(69, 188, 684, 226);
         contentPane.add(tableBeste);
         
         JLabel lblNewLabel = new JLabel("ORDUA");
         lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
         lblNewLabel.setFont(new Font("Yu Gothic Medium", Font.PLAIN, 14));
-        lblNewLabel.setBounds(87, 164, 65, 23);
+        lblNewLabel.setBounds(90, 164, 65, 23);
         contentPane.add(lblNewLabel);
         
         JLabel lblLa = new JLabel("L/A");
         lblLa.setHorizontalAlignment(SwingConstants.CENTER);
         lblLa.setFont(new Font("Yu Gothic Medium", Font.PLAIN, 14));
-        lblLa.setBounds(205, 164, 65, 23);
+        lblLa.setBounds(208, 164, 65, 23);
         contentPane.add(lblLa);
         
         JLabel lblMa = new JLabel("M/A");
@@ -104,19 +110,19 @@ public class BesteOrdutegiFrame extends JFrame {
         JLabel lblX = new JLabel("X");
         lblX.setHorizontalAlignment(SwingConstants.CENTER);
         lblX.setFont(new Font("Yu Gothic Medium", Font.PLAIN, 14));
-        lblX.setBounds(424, 164, 65, 23);
+        lblX.setBounds(432, 164, 65, 23);
         contentPane.add(lblX);
         
         JLabel lblJo = new JLabel("J/O");
         lblJo.setHorizontalAlignment(SwingConstants.CENTER);
         lblJo.setFont(new Font("Yu Gothic Medium", Font.PLAIN, 14));
-        lblJo.setBounds(544, 164, 65, 23);
+        lblJo.setBounds(550, 164, 65, 23);
         contentPane.add(lblJo);
         
         JLabel lblVo = new JLabel("V/O");
         lblVo.setHorizontalAlignment(SwingConstants.CENTER);
         lblVo.setFont(new Font("Yu Gothic Medium", Font.PLAIN, 14));
-        lblVo.setBounds(668, 164, 65, 23);
+        lblVo.setBounds(663, 164, 65, 23);
         contentPane.add(lblVo);
     }
 

@@ -31,7 +31,7 @@ public class HorariosController {
     }
 
     public static List<Horarios> cargarHorariosPorProfesor(int profeId) {
-        Object response = konexioa.ask("getHorariosByUserId/" + profeId);
+        Object response = konexioa.ask("getHorariosByProfeId/" + profeId);
 
         if (response instanceof List<?> && !((List<?>) response).isEmpty() && ((List<?>) response).get(0) instanceof Horarios) {
             return (List<Horarios>) response;

@@ -72,7 +72,7 @@ public class OrdutegiFrame extends JFrame {
 		contentPane.add(lblJo);
 
 		JLabel lblIcon = new JLabel("");
-		lblIcon.setIcon(new ImageIcon("C:\\Users\\in2dm3-d\\Desktop\\Erronka_2\\MG_DAM_E2_T7\\Erronka2_App\\img\\logo.jpg"));
+		lblIcon.setIcon(new ImageIcon("img/logo.jpg"));
 		lblIcon.setBounds(10, 11, 240, 75);
 		contentPane.add(lblIcon);
 
@@ -97,7 +97,7 @@ public class OrdutegiFrame extends JFrame {
 			dispose();
 		});
 		btnAtzera.setBackground(Color.WHITE);
-		btnAtzera.setIcon(new ImageIcon("C:\\Users\\in2dm3-d\\Desktop\\Erronka_2\\MG_DAM_E2_T7\\Erronka2_App\\img\\backward (1).jpg"));
+		btnAtzera.setIcon(new ImageIcon("img/backward.jpg"));
 		btnAtzera.setBounds(10, 442, 57, 54);
 		contentPane.add(btnAtzera);
 		
