@@ -302,8 +302,8 @@ CREATE TABLE `reuniones` (
   `fecha` datetime DEFAULT NULL,
   KEY `profesor_id` (`profesor_id`),
   KEY `alumno_id` (`alumno_id`),
-  CONSTRAINT `reuniones_ibfk_1` FOREIGN KEY (`profesor_id`) REFERENCES `users` (`id`),
-  CONSTRAINT `reuniones_ibfk_2` FOREIGN KEY (`alumno_id`) REFERENCES `users` (`id`)
+  CONSTRAINT `reuniones_ibfk_1` FOREIGN KEY (`profesor_id`) REFERENCES `users` (`id`) ON DELETE CASCADE, 
+  CONSTRAINT `reuniones_ibfk_2` FOREIGN KEY (`alumno_id`) REFERENCES `users` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
