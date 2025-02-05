@@ -266,8 +266,8 @@ CREATE TABLE `modulos` (
 LOCK TABLES `modulos` WRITE;
 /*!40000 ALTER TABLE `modulos` DISABLE KEYS */;
 INSERT INTO `modulos` VALUES 
-(1,'Tutoria','Tutoretza',1,0,0),
-(2,'Guardia','Zaintza',1,0,0),
+(1,'Tutoria','Tutoretza',1,1,1),
+(2,'Guardia','Zaintza',1,1,1),
 (3,'Sistemas Informaticos','Informatika-sistemak',165,1,1),
 (4,'Bases de datos','Datu-baseak',198,1,1),
 (5,'Programación','Programazioa ',264,1,1),
@@ -405,3 +405,15 @@ UNLOCK TABLES;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
 -- Dump completed on 2024-12-09 16:40:46
+ALTER TABLE matriculaciones DROP FOREIGN KEY matriculaciones_ibfk_1;
+ALTER TABLE matriculaciones 
+ADD CONSTRAINT matriculaciones_ibfk_1
+FOREIGN KEY (alum_id) 
+REFERENCES users (id) 
+ON DELETE CASCADE;
+
+drop view if exists HorariosAlumno ;
+create view HorariosAlumno as
+Select distinct hora,mo.nombre,dia,mat.alum_id from matriculaciones mat join modulos mo on mat.ciclo_id = mo.ciclo_id and mat.curso = mo.curso join horarios h on mo.id = h.modulo_id  
+WHERE mo.nombre NOT IN ('Tutoria', 'Guardia') 
+;

@@ -14,7 +14,7 @@ public class konexioa {
 	public static void connect() {
 		try {
 			//server = new Socket("10.5.104.55", 10000);
-			server = new Socket("10.5.104.49", 20000);
+			server = new Socket("10.5.104.61", 20000);
 			System.out.println("Konexioa lortu da");
 		} catch (UnknownHostException e) {
 			System.out.println("Host-a ez da aurkitu");
@@ -46,7 +46,7 @@ public class konexioa {
 	}
 	
 	public static void main(String[] args) {
-//		System.out.println(ask("getAllIkastetxeak/"));
-		System.out.println(ask("getHorariosByAlumnoId/3"));
+		System.out.println(ask("getBilerakByUserId/4"));
+//		System.out.println(ask("getHorariosByAlumnoId/3"));
 	}
 }

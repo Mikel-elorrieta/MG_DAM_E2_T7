@@ -126,7 +126,7 @@ public class BilerakFrame extends JFrame {
     }
 
     private void cargarReunionesEnTabla() {
-        String[] columnNames = {"ID", "Profesor", "Alumno", "Estado", "Fecha", "Aula"};
+        String[] columnNames = {"ID", "Irakaslea", "Ikaslea", "Estado", "Data", "Gela"};
         DefaultTableModel model = new DefaultTableModel(columnNames, 0);
 
         List<Reuniones> reuniones = ReunionesController.cargarReunionesPorProfesor(MainFrame.usuario.getId());
