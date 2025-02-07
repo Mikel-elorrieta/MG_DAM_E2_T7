@@ -25,29 +25,7 @@ public class MainFrame extends JFrame {
     private Login login;
     public static Users usuario;
   
-    /**
-     * Launch the application.
-     */
-    public static void main(String[] args) {
-        EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                try {
-                    Object serverResponse = DAO.konexioa.ask("getAllUsers/");
-                    System.out.println(serverResponse);
-
-                    List<Users> users = UserParser.parseUsers(serverResponse);
-
-                    Login login = new Login(users);
-
-                    MainFrame frame = new MainFrame(login);
-                    frame.setVisible(true);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        });
-    }
-
+   
     /**
      * Create the frame.
      */
