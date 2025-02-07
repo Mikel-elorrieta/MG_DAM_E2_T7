@@ -15,11 +15,13 @@ public class ReunionesController {
      * @return Lista de reuniones asociadas al profesor.
      */
     public static List<Reuniones> cargarReunionesPorProfesor(int profesorId) {
-        Object response = konexioa.ask("getBilerakByUserId/" + profesorId);
+        Object response = konexioa.ask("getBilerakByProfesorId/" + profesorId);
 
         if (response instanceof List<?> && !((List<?>) response).isEmpty() && ((List<?>) response).get(0) instanceof Reuniones) {
             return (List<Reuniones>) response;
-        }
+		} else {
+			System.out.println("Error al cargar las reuniones");
+		}
         return null;
     }
 

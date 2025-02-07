@@ -46,7 +46,7 @@ public class konexioa {
 	}
 	
 	public static void main(String[] args) {
-		System.out.println(ask("getBilerakByUserId/4"));
+		System.out.println(ask("getAllIkastetxeak"));
 //		System.out.println(ask("getHorariosByAlumnoId/3"));
 	}
 }
